@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,10 +13,25 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   var contador = 0;
+  var corAleatoria = Colors.grey[700];
+  final random = new Random();
+
+  var colors = [
+    Colors.blue,
+    Colors.yellow,
+    Colors.green,
+    Colors.red,
+    Colors.pink,
+    Colors.grey,
+    Colors.lightGreen,
+    Colors.lightBlue,
+    Colors.deepPurple
+  ];
 
   void acrescentar() {
     setState(() {
       contador++;
+      corAleatoria = colors[random.nextInt(colors.length - 1)];
     });
   }
 
@@ -22,7 +39,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          scaffoldBackgroundColor: Colors.grey[700],
+          scaffoldBackgroundColor: corAleatoria,
           textTheme: TextTheme(bodyText2: TextStyle(color: Colors.white))),
       home: new Scaffold(
         appBar: AppBar(
