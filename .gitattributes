@@ -39,4 +39,4 @@
 
 *.js linguist-vendored
 *.swift linguist-vendored
-*.kt
+*.kt linguist-vendored
