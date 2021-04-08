@@ -3,10 +3,6 @@
 
 *.cs text diff=dart
 
-android/* linguist-vendored
-ios/* linguist-vendored
-web/* linguist-vendored
-
 # Always perform LF normalization
 *.dart            text
 *.gradle          text
@@ -41,4 +37,6 @@ web/* linguist-vendored
 *.ttf             binary
 *.otf             binary
 
-Passlockr/Scripts/* linguist-vendored
+android/* linguist-vendored
+ios/* linguist-vendored
+web/* linguist-vendored
