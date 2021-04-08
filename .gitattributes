@@ -1,8 +1,6 @@
 # Auto detect text files and perform LF normalization
 *                 text=auto
 
-*.cs text diff=dart
-
 # Always perform LF normalization
 *.dart            text
 *.gradle          text
@@ -37,6 +35,12 @@
 *.ttf             binary
 *.otf             binary
 
-android/* linguist-vendored
-ios/* linguist-vendored
-web/* linguist-vendored
+*.cs text diff=csharp
+
+android/* linguist-detectable=false
+ios/* linguist-detectable=false
+web/* linguist-detectable=false
+*.swift linguist-detectable=false
+*.kt linguist-detectable=false
+*.js linguist-detectable=false
+*.h linguist-detectable=false
